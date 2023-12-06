@@ -1,5 +1,10 @@
 :root {
     font-family: 'Roboto', sans-serif;
+    --grey-background:  rgba(241, 241, 241, 0.92);
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 svg{
@@ -7,8 +12,20 @@ svg{
     height: 24px;
 }
 
-svg path {
+.sidebar svg path {
     fill: rgb(255, 255, 255);
+}
+
+.header svg {
+    width: 2rem;
+    height: 2rem;
+    gap: 10px;
+
+}
+
+.welcome svg {
+    width: 8rem;
+    height: 8rem;
 }
 
 .logo svg {
@@ -32,8 +49,24 @@ h1 {
 
 }
 
+.header .welcome {
+    display: flex;
+}
+
 .header .search-bar {
+    padding: 50px 100px 60px 30px;
     grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    gap: 20px
+}
+
+.header .search-bar input {
+    width: 40vw;
+    height: 3vh;
+    border: 0;
+    background-color: var(--grey-background);
+    border-radius: 20px;
 }
 
 .header .profile {
@@ -75,7 +108,7 @@ h1 {
 }
 
 .main {
-    background-color: rgba(211, 211, 211, 0.92);
+    background-color: var(--grey-background);
     grid-column: 2/3;
     display: grid;
     grid-template-columns: 3fr 1fr;
